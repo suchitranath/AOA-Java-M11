@@ -11,23 +11,70 @@ x if x >= 0.
 -x if x < 0.
 
 ## Algorithm
-1. 
-2. 
-3. 
-4.  
-5.   
+Start
 
+Read integer n (size of array).
+
+Create an array nums of size n.
+
+Read all n integers into the array nums.
+
+Read integer k.
+
+Initialize count = 0.
+
+For each index i from 0 to n − 1: For each index j from i + 1 to n − 1: If abs(nums[i] − nums[j]) == k, then: Increment count by 1.
+
+Print the value of count.
+
+Stop
 ## Program:
 ```
 /*
 Program to implement Reverse a String
-Developed by: 
-Register Number:  
+Developed by: Suchitra nath
+Register Number:  212223220112
 */
+
+import java.util.Scanner;
+public class CountPairsWithDifference {
+    public static int countKDifference(int[] nums, int k) {
+        int count=0;
+        for (int i=0;i<nums.length;i++)
+        {
+            for(int j=i+1;j<nums.length;j++)
+            {
+                if (Math.abs(nums[i]-nums[j])==k)
+                {
+                    count++;
+                }
+            }
+        }
+        
+        
+        return count;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] nums = new int[n];
+        for (int i = 0; i < n; i++) {
+            nums[i] = sc.nextInt();
+        }
+        int k = sc.nextInt();
+        int result = countKDifference(nums, k);
+        System.out.println(result);
+        sc.close();
+    }
+}
+
+
+
 ```
 
 ## Output:
 
+<img width="445" height="432" alt="image" src="https://github.com/user-attachments/assets/0be2707a-363f-40a3-9e57-616093f20314" />
 
 
 ## Result:
